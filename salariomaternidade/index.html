@@ -288,28 +288,17 @@
         }
 
         .btn-glass {
-            background: var(--glass-d);
-            color: #fff;
-            border-color: var(--glass-d-brd);
+            background: rgba(26, 35, 50, .05);
+            color: var(--navy);
+            border-color: rgba(26, 35, 50, .18);
             backdrop-filter: blur(10px)
         }
 
         .btn-glass:hover {
-            background: rgba(255, 255, 255, .12);
-            transform: translateY(-3px);
-            border-color: var(--gold)
-        }
-
-        header.scrolled .nav-cta .btn-glass {
-            background: rgba(26, 35, 50, .05);
-            color: var(--navy);
-            border-color: rgba(26, 35, 50, .18)
-        }
-
-        header.scrolled .nav-cta .btn-glass:hover {
             background: var(--navy);
             color: var(--cream);
-            border-color: var(--navy)
+            border-color: var(--navy);
+            transform: translateY(-3px)
         }
 
         .btn-ghost {
@@ -385,15 +374,11 @@
             height: 46px
         }
 
+        .nav .logo-cream {
+            display: none
+        }
+
         .nav .logo-navy {
-            display: none
-        }
-
-        header.scrolled .nav .logo-cream {
-            display: none
-        }
-
-        header.scrolled .nav .logo-navy {
             display: block
         }
 
@@ -408,7 +393,7 @@
         }
 
         .nav-links a {
-            color: rgba(255, 255, 255, .82);
+            color: var(--muted);
             transition: .25s;
             position: relative;
             padding: 4px 0
@@ -461,19 +446,15 @@
             width: 26px;
             height: 2px;
             border-radius: 3px;
-            background: #fff;
+            background: var(--navy);
             transition: .3s
         }
 
-        header.scrolled .burger span {
-            background: var(--navy)
-        }
-
-        /* hero */
+        /* hero — PRATA */
         .hero {
             position: relative;
-            background: var(--navy-1);
-            color: var(--cream);
+            background: #dde3ec;
+            color: var(--navy);
             padding: 186px 0 120px;
             overflow: hidden
         }
@@ -483,17 +464,17 @@
             inset: 0;
             z-index: 0;
             background:
-                radial-gradient(680px circle at 78% 18%, rgba(184, 148, 95, .22), transparent 60%),
-                radial-gradient(560px circle at 12% 88%, rgba(44, 58, 83, .8), transparent 62%),
-                linear-gradient(160deg, var(--navy-1), var(--navy) 55%, var(--navy-2))
+                radial-gradient(680px circle at 78% 18%, rgba(184, 148, 95, .18), transparent 60%),
+                radial-gradient(560px circle at 12% 88%, rgba(26, 35, 50, .08), transparent 62%),
+                linear-gradient(160deg, #e6ebf1, #dde3ec 55%, #d1d8e2)
         }
 
         .hero-bg::after {
             content: "";
             position: absolute;
             inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.03' stroke-width='1'%3E%3Cpath d='M0 40h80M40 0v80'/%3E%3C/g%3E%3C/svg%3E");
-            opacity: .6
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%231a2332' stroke-opacity='.05' stroke-width='1'%3E%3Cpath d='M0 40h80M40 0v80'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: .8
         }
 
         .hero-grid {
@@ -509,8 +490,8 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: var(--glass-d);
-            border: 1px solid var(--glass-d-brd);
+            background: rgba(255, 255, 255, .55);
+            border: 1px solid rgba(26, 35, 50, .12);
             backdrop-filter: blur(10px);
             border-radius: 999px;
             padding: 9px 18px;
@@ -518,7 +499,7 @@
             font-size: .8rem;
             letter-spacing: .04em;
             font-weight: 400;
-            color: var(--gold-2);
+            color: var(--gold-deep);
             margin-bottom: 30px
         }
 
@@ -534,7 +515,7 @@
             font-size: clamp(2.7rem, 5.6vw, 4.5rem);
             font-weight: 500;
             letter-spacing: -.02em;
-            color: var(--cream)
+            color: var(--navy)
         }
 
         .hero h1 em {
@@ -545,7 +526,7 @@
         .hero p.sub {
             margin: 28px 0 0;
             font-size: 1.18rem;
-            color: rgba(250, 246, 238, .78);
+            color: rgba(26, 35, 50, .72);
             max-width: 540px;
             font-weight: 400;
             line-height: 1.72
@@ -564,7 +545,7 @@
             margin-top: 48px;
             flex-wrap: wrap;
             padding-top: 36px;
-            border-top: 1px solid rgba(255, 255, 255, .1)
+            border-top: 1px solid rgba(26, 35, 50, .12)
         }
 
         .hero-trust .t b {
@@ -573,7 +554,7 @@
             font-size: 2.2rem;
             font-weight: 600;
             line-height: 1;
-            color: var(--gold-2);
+            color: var(--gold-deep);
             margin-bottom: 6px
         }
 
@@ -581,7 +562,7 @@
             font-family: 'Jost', sans-serif;
             font-size: .82rem;
             letter-spacing: .03em;
-            color: rgba(250, 246, 238, .58)
+            color: var(--muted)
         }
 
         /* hero — retrato da Dra. */
@@ -646,16 +627,16 @@
 
         .float-card {
             position: absolute;
-            background: rgba(255, 255, 255, .07);
+            background: rgba(255, 255, 255, .75);
             backdrop-filter: blur(16px) saturate(150%);
-            border: 1px solid rgba(255, 255, 255, .16);
+            border: 1px solid rgba(26, 35, 50, .1);
             border-radius: 16px;
-            box-shadow: 0 20px 44px rgba(0, 0, 0, .32);
+            box-shadow: 0 20px 44px rgba(26, 35, 50, .15);
             padding: 15px 19px;
             display: flex;
             align-items: center;
             gap: 13px;
-            color: var(--cream);
+            color: var(--navy);
             z-index: 4
         }
 
@@ -666,7 +647,7 @@
             display: grid;
             place-items: center;
             background: var(--grad-gold);
-            color: var(--navy);
+            color: #fff;
             flex: 0 0 auto
         }
 
@@ -682,7 +663,7 @@
             font-family: 'Jost', sans-serif;
             font-size: .76rem;
             letter-spacing: .02em;
-            color: rgba(250, 246, 238, .65)
+            color: var(--muted)
         }
 
         .fc-1 {
@@ -2082,10 +2063,9 @@
     </section>
 
     <!-- O QUE VOCÊ PODE CONTAR (versão enxuta) -->
-    <section style="background:var(--cream);padding:104px 0;">
+    <section style="background:#f0e2c2;padding:104px 0;">
         <div class="wrap">
             <div class="head center reveal">
-                <span class="kicker">O que você pode contar</span>
                 <h2>O maior risco é <em>descobrir tarde</em> que você tinha direito o tempo todo.</h2>
                 <p class="lead center">Sua atenção deve ser no seu bebê, não em uma agência do INSS. Em uma conversa você entende se tem direito, quanto pode receber e o que fazer.</p>
             </div>
@@ -2130,19 +2110,14 @@
         <div class="wrap">
             <div style="display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;max-width:1080px;margin:0 auto;">
                 <div class="reveal">
-                    <span class="kicker">O que eu faço pelo seu caso</span>
-                    <h2>Do <em>primeiro áudio</em> até o benefício sair (ou a resposta final)</h2>
-                    <p style="color:var(--muted);margin-top:22px;font-size:1.05rem;">Não te empurro pra pedir sem entender. Não te deixo sem resposta. Cada etapa abaixo é o meu trabalho, do começo ao fim do seu processo.</p>
+                    <h2>Do <em>primeiro contato</em> à decisão final, você não faz nada sozinha</h2>
+                    <p style="color:var(--muted);margin-top:22px;font-size:1.05rem;">Cada etapa abaixo é o meu trabalho. Você acompanha, entende e nunca fica sem resposta.</p>
                 </div>
                 <div class="reveal d1">
                     <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;">
                         <li style="display:flex;gap:16px;align-items:flex-start;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-sm);">
                             <span style="flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;color:#fff;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
-                            <span style="font-family:'Jost',sans-serif;font-size:.98rem;color:var(--navy);line-height:1.55;">Escuto a sua situação com calma, sem julgar e sem juridiquês.</span>
-                        </li>
-                        <li style="display:flex;gap:16px;align-items:flex-start;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-sm);">
-                            <span style="flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;color:#fff;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
-                            <span style="font-family:'Jost',sans-serif;font-size:.98rem;color:var(--navy);line-height:1.55;">Analiso o seu CNIS e o seu histórico de contribuição.</span>
+                            <span style="font-family:'Jost',sans-serif;font-size:.98rem;color:var(--navy);line-height:1.55;">Escuto a sua situação com calma, sem julgar.</span>
                         </li>
                         <li style="display:flex;gap:16px;align-items:flex-start;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-sm);">
                             <span style="flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;color:#fff;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
@@ -2151,10 +2126,6 @@
                         <li style="display:flex;gap:16px;align-items:flex-start;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-sm);">
                             <span style="flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;color:#fff;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
                             <span style="font-family:'Jost',sans-serif;font-size:.98rem;color:var(--navy);line-height:1.55;">Estudo se você já cumpre a carência exigida em lei.</span>
-                        </li>
-                        <li style="display:flex;gap:16px;align-items:flex-start;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-sm);">
-                            <span style="flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;color:#fff;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
-                            <span style="font-family:'Jost',sans-serif;font-size:.98rem;color:var(--navy);line-height:1.55;">Oriento sobre a documentação necessária pra o seu perfil.</span>
                         </li>
                         <li style="display:flex;gap:16px;align-items:flex-start;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-sm);">
                             <span style="flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;color:#fff;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
@@ -2174,7 +2145,6 @@
     <section class="why">
         <div class="wrap">
             <div class="head center reveal">
-                <span class="kicker">Quem eu atendo</span>
                 <h2>Você pode ter direito, <em>mesmo que ache que não</em></h2>
                 <p class="lead center">O salário maternidade cobre mais gente do que a maioria imagina. Se você se encaixa em qualquer um destes perfis, vale conversar.</p>
             </div>
@@ -2203,7 +2173,6 @@
     <section class="pledges">
         <div class="wrap">
             <div class="head center reveal">
-                <span class="kicker">O meu compromisso com você</span>
                 <h2>O que você pode <em>esperar de mim</em></h2>
                 <p class="lead center">Mais do que prometer resultado, eu me comprometo com a forma como o seu caso é tratado.</p>
             </div>
