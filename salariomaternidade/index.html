@@ -11,15 +11,40 @@
       gtag('js', new Date());
       gtag('config', 'G-K6NLNV6LV2');
     </script>
-    <!-- Rastreio de cliques no WhatsApp como evento de conversão -->
+    <!-- Meta Pixel -->
     <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1480908070465185');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1480908070465185&ev=PageView&noscript=1"/></noscript>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "y1ecs561fu");
+    </script>
+    <!-- Rastreio unificado de cliques no WhatsApp (GA4 + Meta) -->
+    <script defer>
       document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('a[href*="wa.me/"]').forEach(function (link) {
           link.addEventListener('click', function () {
-            gtag('event', 'clique_whatsapp', {
-              'link_url': link.href,
-              'link_location': link.closest('section') ? link.closest('section').className : 'outro'
-            });
+            var loc = link.closest('section') ? link.closest('section').className : 'outro';
+            if (typeof gtag === 'function') {
+              gtag('event', 'clique_whatsapp', { 'link_url': link.href, 'link_location': loc });
+            }
+            if (typeof fbq === 'function') {
+              fbq('track', 'Contact', { content_name: 'WhatsApp Click', source: loc });
+            }
           });
         });
       });
@@ -1931,8 +1956,8 @@
         <div class="wrap">
             <nav class="nav" id="nav">
                 <a href="#topo" aria-label="Analaury Silva Moura Advocacia">
-                    <img class="logo-cream" src="assets/img/logo-cream.webp" width="843" height="685" alt="Analaury Silva Moura Advocacia">
-                    <img class="logo-navy" src="assets/img/logo-navy.webp" width="843" height="685" alt="Analaury Silva Moura Advocacia">
+                    <img class="logo-cream" src="assets/img/logo-cream.webp" width="400" height="325" alt="Analaury Silva Moura Advocacia">
+                    <img class="logo-navy" src="assets/img/logo-navy.webp" width="400" height="325" alt="Analaury Silva Moura Advocacia">
                 </a>
                 <div class="nav-links">
                     <a href="#situacao">Sua situação</a>
@@ -1967,10 +1992,10 @@
             <div class="hero-visual reveal d1">
                 <div class="portrait-hero">
                     <div class="portrait-ph">
-                        <img src="assets/img/logo-cream.webp" width="843" height="685" alt="Analaury Silva Moura Advocacia">
+                        <img src="assets/img/logo-cream.webp" width="400" height="325" alt="Analaury Silva Moura Advocacia">
                         <span>Envie a foto da Dra. para<br>assets/img/dra-hero.webp</span>
                     </div>
-                    <img class="dra-photo" src="assets/img/dra-hero.webp" width="950" height="1266" alt="Dra. Analaury Silva Moura" fetchpriority="high" onerror="this.style.display='none'">
+                    <img class="dra-photo" src="assets/img/dra-hero.webp" width="720" height="959" alt="Dra. Analaury Silva Moura" fetchpriority="high" onerror="this.style.display='none'">
                 </div>
                 <div class="float-card fc-1">
                     <div class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 21v-5h4v5" /></svg></div>
@@ -2040,9 +2065,9 @@
         <div class="wrap about-grid">
             <div class="about-portrait reveal">
                 <div class="portrait-frame">
-                    <img class="ph-logo" src="assets/img/logo-cream.webp" width="843" height="685" alt="Analaury Silva Moura Advocacia" loading="lazy">
+                    <img class="ph-logo" src="assets/img/logo-cream.webp" width="400" height="325" alt="Analaury Silva Moura Advocacia" loading="lazy">
                     <span class="portrait-note">Envie a foto da Dra. para<br>assets/img/dra-sobre.webp</span>
-                    <img class="dra-photo" src="assets/img/dra-sobre.webp" width="1000" height="1250" alt="Dra. Analaury Silva Moura" loading="lazy" onerror="this.style.display='none'">
+                    <img class="dra-photo" src="assets/img/dra-sobre.webp" width="720" height="900" alt="Dra. Analaury Silva Moura" loading="lazy" onerror="this.style.display='none'">
                 </div>
                 <div class="portrait-badge">
                     <b>OAB/MG</b>
@@ -2269,7 +2294,7 @@
         <div class="wrap">
             <div class="foot-grid">
                 <div>
-                    <img class="logo" src="assets/img/logo-cream.webp" width="843" height="685" alt="Analaury Silva Moura Advocacia" loading="lazy">
+                    <img class="logo" src="assets/img/logo-cream.webp" width="400" height="325" alt="Analaury Silva Moura Advocacia" loading="lazy">
                     <p class="foot-about">Advocacia previdenciária com atendimento próximo e linguagem clara, em Tupaciguara/MG, Uberlândia e região.</p>
                     <a href="https://wa.me/5534998988156">WhatsApp (34) 99898-8156</a>
                     <a href="mailto:analaurysmadvocacia@outlook.com">analaurysmadvocacia@outlook.com</a>
